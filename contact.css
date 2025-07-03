@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", sans-serif;
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  .contact-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #e0f7fa, #f1f8e9); /* 明るい青緑系背景 */
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #0077cc; /* 青 */
+    margin-bottom: 10px;
+  }
+  
+  .sub {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border: 2px solid #4caf50; /* 緑のフォーカス */
+    outline: none;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    background-color: #ffeb3b; /* 黄色ボタン */
+    color: #333;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #fdd835;
+  }
