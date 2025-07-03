@@ -1,4 +1,7 @@
-/* ベース設定 */
+/* 共通 */
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: 'Fredoka', sans-serif;
@@ -9,55 +12,45 @@ body {
 /* ヘッダー */
 header {
   background: white;
+  padding: 10px 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
-
 .logo img {
-  width: 160px;
-  height: auto;
+  height: 60px;
 }
-
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 10px 0 0 0;
+  gap: 16px;
+  margin: 0;
   padding: 0;
 }
-
 nav a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  font-size: 14px;
 }
-
 nav a:hover {
   color: #1d70b8;
 }
 
-/* ヒーローセクション */
+/* メインヒーロー */
 .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
 }
-
 .hero video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .hero-text {
   position: absolute;
   top: 50%;
@@ -66,167 +59,127 @@ nav a:hover {
   color: white;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
   text-align: center;
-  padding: 0 10px;
 }
-
 .hero-text h1 {
-  font-size: 40px;
+  font-size: 42px;
   margin-bottom: 10px;
 }
-
 .hero-text p {
   font-size: 18px;
 }
 
-/* 各セクション */
+/* セクション */
 .section {
   padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
   text-align: center;
-  background: white;
+  background: #fff;
 }
-
 .section h2 {
-  font-size: 28px;
+  font-size: 32px;
   color: #1d70b8;
   margin-bottom: 30px;
 }
 
-/* Visionカード */
+/* MVVカード */
 .mvv-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  align-items: center;
+  gap: 20px;
 }
-
 .mvv-card {
   background: #fffbe6;
   border: 2px solid lightskyblue;
   border-radius: 12px;
-  padding: 25px;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
 .mvv-card h3 {
-  font-size: 20px;
   color: lightskyblue;
-  margin-bottom: 15px;
+  font-size: 20px;
 }
-
 .mvv-card p {
   font-size: 15px;
-  color: #444;
   line-height: 1.6;
 }
 
 /* ボタン */
 .btn {
   display: inline-block;
-  margin-top: 25px;
-  padding: 10px 25px;
+  margin-top: 20px;
+  padding: 10px 20px;
   background: #ff9800;
   color: white;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 30px;
   font-weight: bold;
   transition: background 0.3s;
-  font-size: 14px;
 }
-
 .btn:hover {
   background: #ffa726;
 }
 
-/* サービス */
-.service-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-
-.service-item {
-  width: 100%;
-  max-width: 400px;
-  background: #fff7ea;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-.service-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* ニュース */
-.news-section {
-  background-color: #fef9f4;
-}
-
+/* ニュースカード */
 .news-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
-
 .news-card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  width: 280px;
+  background: white;
   padding: 20px;
-  width: 100%;
-  max-width: 360px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
-
-.news-thumb {
+.news-card img {
   width: 100%;
-  height: 150px;
+  height: 140px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
+}
+.news-card h3 {
+  font-size: 20px;
+  color: #f48c06;
+  margin: 12px 0 6px;
+}
+.news-card p {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-/* マップ */
+/* マップセクション */
 .map-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  padding: 20px;
-  align-items: center;
+  padding: 40px 20px;
 }
-
 .map-box {
   width: 100%;
   max-width: 500px;
 }
-
 .map-title {
+  font-weight: bold;
   margin-bottom: 10px;
-  font-size: 16px;
-  color: #333;
 }
 
-/* テーブル（アクセス） */
+/* テーブル */
 #access table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 1rem;
-  margin: auto;
 }
-
 #access th, #access td {
-  padding: 10px 12px;
+  padding: 10px;
   border-bottom: 1px solid #ddd;
-  text-align: left;
 }
-
 #access th {
   color: blue;
   width: 35%;
+  text-align: left;
 }
 
 /* フッター */
@@ -235,30 +188,53 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  font-size: 14px;
 }
 
-/* レスポンシブ対応 */
-@media (min-width: 768px) {
+/* --- レスポンシブ調整 --- */
+@media screen and (max-width: 1024px) {
+  .mvv-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
   nav ul {
-    justify-content: flex-end;
-  }
-
-  .service-box {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .news-container {
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 12px;
   }
+  .section {
+    padding: 40px 15px;
+  }
+}
 
-  .map-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .logo img {
+    height: 50px;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  nav a {
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  .hero-text h1 {
+    font-size: 28px;
+  }
+  .hero-text p {
+    font-size: 16px;
+  }
+  .btn {
+    padding: 8px 16px;
+  }
+  .news-card {
+    width: 100%;
+    max-width: 340px;
   }
 }
