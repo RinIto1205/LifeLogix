@@ -1,149 +1,154 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* フォントと基本リセット */
 body {
+  margin: 0;
   font-family: 'Fredoka', sans-serif;
-  line-height: 1.6;
-  background-color: #fdfdfd;
+  background-color: #fff;
   color: #333;
+  line-height: 1.6;
 }
 
-/* Header */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* ヘッダー */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 5%;
+  padding: 15px 20px;
   background-color: #fff;
   position: sticky;
   top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
 }
 
 .logo img {
-  height: 50px;
+  height: 40px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: #000;
+  color: #333;
   font-weight: 600;
-  transition: 0.3s;
 }
 
-nav ul li a:hover {
-  color: #0077cc;
-}
-
-/* Hero */
+/* ヒーローセクション */
 .hero {
   position: relative;
-  width: 100%;
-  height: 50vh;
+  height: 100vh;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .hero video {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
   object-fit: cover;
+  z-index: -1;
 }
 
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: #fff;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-  text-align: center;
+  text-shadow: 2px 2px 5px #000;
 }
 
-/* Section */
-.section {
-  padding: 60px 5%;
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-.section h2 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 40px;
-  color: #1a73e8;
+.hero-text p {
+  font-size: 1.2rem;
 }
 
-/* MVV Cards */
+/* MVVカード */
 .mvv-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .mvv-card {
-  background-color: #fffbe7;
-  padding: 20px;
-  border-radius: 12px;
+  background: #fff8dc;
   border: 2px solid #add8e6;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .mvv-card h3 {
-  color: #4a90e2;
+  color: #00aaff;
   margin-bottom: 10px;
-  text-align: center;
-}
-
-.btn {
-  display: inline-block;
-  background-color: orange;
-  color: #fff;
-  padding: 10px 30px;
-  border-radius: 25px;
-  text-decoration: none;
   font-weight: bold;
-  margin-top: 20px;
   text-align: center;
-  transition: 0.3s;
 }
 
-.btn:hover {
-  background-color: darkorange;
-}
-
-.section .btn {
-  display: block;
-  margin: 0 auto;
-}
-
-/* Services */
+/* サービスセクション */
 .service-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .service-item {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
   max-width: 300px;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .service-item img {
   width: 100%;
-  border-radius: 12px;
-  margin-bottom: 10px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ボタン */
+.btn {
+  display: inline-block;
+  background-color: orange;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin: 20px auto 0;
+  text-align: center;
 }
 
 /* ニュース */
@@ -156,112 +161,141 @@ nav ul li a:hover {
 
 .news-card {
   width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 15px;
   text-align: center;
 }
 
 .news-thumb {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
-/* 採用情報 */
-#recruit {
-  background-color: #e0f7ff;
-  text-align: center;
-}
-
-/* お問い合わせ */
-#contact {
-  background-color: #e0fcd6;
-  text-align: center;
-}
-
-/* アクセス表 */
-#access table {
-  margin: 0 auto;
-  max-width: 600px;
+/* テーブル */
+table {
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   border-collapse: collapse;
-  background-color: #fff;
 }
 
-#access table th,
-#access table td {
-  padding: 12px;
-  border-bottom: 1px solid #ddd;
+th, td {
   text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-#access h2 {
-  margin-bottom: 20px;
+th {
+  width: 30%;
+  background: #f0f0f0;
 }
 
-/* Google Maps */
+/* 地図セクション */
 .map-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   margin: 40px 0;
 }
 
 .map-box {
-  width: 100%;
+  flex: 1 1 400px;
   max-width: 500px;
 }
 
 .map-title {
   text-align: center;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-/* Footer */
+/* フッター */
 footer {
-  background-color: #195ea8;
-  color: #fff;
+  background: #1d70b8;
+  color: white;
   text-align: center;
   padding: 20px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* レスポンシブ調整 */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   nav ul {
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    gap: 8px;
+    margin-top: 10px;
   }
 
   .hero-text h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
-  .mvv-container {
-    padding: 0 10px;
+  .hero-text p {
+    font-size: 1rem;
   }
 
-  .service-box,
-  .news-container {
-    flex-direction: column;
-    align-items: center;
+  .section {
+    padding: 40px 16px;
   }
 
-  .map-container {
-    flex-direction: column;
-    align-items: center;
+  .btn {
+    font-size: 14px;
+    padding: 8px 20px;
   }
 
-  #access table {
-    font-size: 0.9rem;
+  .map-box iframe {
+    width: 100% !important;
+    height: 300px !important;
   }
 }
 
-@media (min-width: 1024px) {
-  .mvv-container {
-    grid-template-columns: repeat(3, 1fr);
+/* 採用・問い合わせセクション中央寄せ＋背景色 */
+.recruit-section {
+  background-color: #e0f7ff; /* 薄い青 */
+  text-align: center;
+}
+
+.contact-section {
+  background-color: #e0ffe0; /* 薄い緑 */
+  text-align: center;
+}
+
+/* バーガーメニュー表示 */
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* モバイル用メニュー開閉制御 */
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  nav#nav-menu {
+    display: none;
+    width: 100%;
+  }
+
+  nav#nav-menu.active {
+    display: block;
+  }
+
+  nav#nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    padding: 10px 20px;
   }
 }
